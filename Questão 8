@@ -1,0 +1,16 @@
+% Base de conhecimento
+distancia(cidade_a, cidade_b, 100).
+distancia(cidade_a, cidade_c, 150).
+distancia(cidade_a, cidade_d, 200).
+distancia(cidade_b, cidade_c, 80).
+distancia(cidade_b, cidade_d, 120).
+distancia(cidade_c, cidade_d, 50).
+distancia(cidade_d, cidade_e, 180).
+distancia(cidade_d, cidade_f, 220).
+distancia(cidade_e, cidade_f, 100).
+distancia(cidade_e, cidade_g, 130).
+
+% Regra para encontrar a cidade mais próxima
+cidade_mais_proxima(Origem, MaisProxima) :-
+distancia(Origem, MaisProxima, Distancia),
+\+ (distancia(Origem, OutraCidade, OutraDistancia), OutraDistancia < Distancia).
