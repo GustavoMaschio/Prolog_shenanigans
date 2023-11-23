@@ -1,0 +1,14 @@
+% Base de conhecimento com cidades e países
+cidade_pais(paris, franca).
+cidade_pais(londres, reino_unido).
+cidade_pais(roma, italia).
+cidade_pais(buenos_aires, argentina).
+cidade_pais(nova_iorque, estados_unidos).
+cidade_pais(cairo, egito).
+cidade_pais(tokio, japao).
+cidade_pais(sydney, australia).
+cidade_pais(moscou, russia).
+cidade_pais(pequim, china).
+
+% Regra para encontrar todas as cidades em um determinado país
+cidades_no_pais(Pais, ListaCidades) :- findall(Cidade, cidade_pais(Cidade, Pais), ListaCidades).
