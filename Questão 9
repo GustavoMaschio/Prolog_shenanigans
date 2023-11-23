@@ -1,0 +1,15 @@
+% Base de conhecimento
+lingua(brasil, portugues).
+lingua(estados_unidos, ingles).
+lingua(franca, frances).
+lingua(espanha, espanhol).
+lingua(alemanha, alemao).
+lingua(portugal, portugues).
+lingua(reino_unido, ingles).
+lingua(italia, italiano).
+lingua(argentina, espanhol).
+lingua(japao, japones).
+
+% Regra para encontrar países onde uma língua é falada
+paises_com_lingua(Lingua, Paises) :-
+findall(Pais, lingua(Pais, Lingua), Paises).
