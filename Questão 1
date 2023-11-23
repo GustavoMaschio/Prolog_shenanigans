@@ -1,0 +1,39 @@
+% Base de conhecimento nomes e idades de 10 pessoas
+nome(1, 'Alice').
+idade(1, 35).
+
+nome(2, 'Bob').
+idade(2, 30).
+
+nome(3, 'Carol').
+idade(3, 25).
+
+nome(4, 'David').
+idade(4, 20).
+
+nome(5, 'Eva').
+idade(5, 33).
+
+nome(6, 'Fred').
+idade(6, 28).
+
+nome(7, 'Gabriela').
+idade(7, 19).
+
+nome(8, 'Henrique').
+idade(8, 31).
+
+nome(9, 'Isabel').
+idade(9, 23).
+
+nome(10, 'João').
+idade(10, 18).
+
+% Regra para verificar se uma pessoa tem mais de 30 anos
+mais_de_30_anos(Id) :-
+idade(Id, Idade),
+Idade > 30.
+
+% Regra para listar todas as pessoas que têm mais de 30 anos
+pessoas_com_mais_de_30_anos(Pessoas) :-
+findall(Id, mais_de_30_anos(Id), Pessoas).
