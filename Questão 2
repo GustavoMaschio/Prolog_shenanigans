@@ -1,0 +1,17 @@
+% Base de conhecimento com cores e objetos
+cor_objeto(vermelho, maça).
+cor_objeto(azul, caneta).
+cor_objeto(amarelo, banana).
+cor_objeto(verde, abacate).
+cor_objeto(rosa, flor).
+cor_objeto(preto, piano).
+cor_objeto(branco, nuvem).
+cor_objeto(laranja, laranja).
+cor_objeto(roxo, berinjela).
+cor_objeto(ciano, céu).
+
+% Regra para relacionar cor a objeto
+cor_associada_a_objeto(Cor, Objeto) :- cor_objeto(Cor, Objeto).
+
+% Verificar se "verde" está associado a algum objeto
+?- cor_associada_a_objeto(verde, Objeto).
