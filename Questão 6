@@ -1,0 +1,17 @@
+% Base de conhecimento
+animal(leao, mamifero).
+animal(girafa, mamifero).
+animal(pinguim, ave).
+animal(baleia, mamifero).
+animal(elefante, mamifero).
+animal(cobra, reptil).
+animal(macaco, mamifero).
+animal(tigre, mamifero).
+animal(arara, ave).
+animal(hipopotamo, mamifero).
+
+% Regra para encontrar todos os animais de uma espécie específica
+animais_da_especie(Especie) :-
+animal(Animal, Especie),
+write(Animal), nl,
+fail. % Força a retrocessão para procurar mais soluções
