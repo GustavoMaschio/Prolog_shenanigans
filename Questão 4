@@ -1,0 +1,16 @@
+% Base de conhecimento
+produto(celular, 1000, 5).
+produto(laptop, 2000, 3).
+produto(teclado, 50, 10).
+produto(mouse, 30, 0).
+produto(fone, 80, 8).
+produto(monitor, 300, 2).
+produto(tablet, 500, 0).
+produto(caixa_som, 70, 6).
+produto(impressora, 150, 4).
+produto(robo_aspirador, 400, 1).
+
+% Regra para verificar se um produto está em falta
+em_falta(Produto) :-
+produto(Produto, _, Quantidade),
+Quantidade = 0.
