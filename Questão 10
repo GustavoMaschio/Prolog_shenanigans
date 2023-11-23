@@ -1,0 +1,19 @@
+% Base de conhecimento
+ingrediente(sal).
+ingrediente(acucar).
+ingrediente(farinha).
+ingrediente(ovos).
+ingrediente(leite).
+ingrediente(oleo).
+ingrediente(fermento).
+ingrediente(chocolate).
+ingrediente(canela).
+ingrediente(manteiga).
+
+receita(bolo_de_chocolate, [farinha, ovos, leite, oleo, chocolate, fermento]).
+receita(bolo_de_canela, [farinha, ovos, leite, oleo, canela, fermento]).
+receita(bolo_simples, [farinha, ovos, leite, oleo, fermento]).
+
+% Regra para listar receitas que contenham um ingrediente específico
+receitas_com_ingrediente(Ingrediente, Receitas) :-
+findall(Receita, (receita(Receita, Ingredientes), member(Ingrediente, Ingredientes)), Receitas).
