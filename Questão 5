@@ -1,0 +1,17 @@
+% Base de conhecimento
+musica(somewhere_over_the_rainbow, pop).
+musica(bohemian_rhapsody, rock).
+musica(billie_jean, pop).
+musica(hotel_california, rock).
+musica(night_fever, pop).
+musica(have_you_ever_seen_the_rain, rock).
+musica(watch_me, tech_house).
+musica(i_was_made_for_lovin_you_babe, pop).
+musica(fortunate_son, rock).
+musica(smooth_criminal, pop).
+
+% Regra para listar todas as músicas de um gênero específico
+musicas_do_genero(Genero) :-
+musica(Musica, Genero),
+write(Musica), nl,
+fail. % Força a retrocessão para procurar mais soluções
